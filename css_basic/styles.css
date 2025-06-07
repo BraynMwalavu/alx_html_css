@@ -1,0 +1,42 @@
+/* Make body and html stretch full height */
+html, body {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Flex column layout: header, main, footer */
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Header and Footer styles */
+header, footer {
+    border: 1px solid #ccc;
+    padding: 16px;
+    text-align: left;
+}
+
+/* Main content container: holds article and aside */
+main {
+    display: flex;
+    flex-direction: row;
+    flex: 1; /* fills remaining space */
+    min-height: 0;
+}
+
+/* Article and Aside content areas */
+article {
+    flex: 2;
+    border: 1px solid #ccc;
+    padding: 16px;
+    overflow-y: auto;
+}
+
+aside {
+    flex: 1;
+    border: 1px solid #ccc;
+    padding: 16px;
+    overflow-y: auto;
+}
