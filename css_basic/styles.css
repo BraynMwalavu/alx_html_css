@@ -1,42 +1,31 @@
-/* Make body and html stretch full height */
-html, body {
-    height: 100%;
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-/* Flex column layout: header, main, footer */
 body {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-/* Header and Footer styles */
-header, footer {
-    border: 1px solid #ccc;
-    padding: 16px;
-    text-align: left;
-}
-
-/* Main content container: holds article and aside */
+/* Container inside body */
 main {
     display: flex;
-    flex-direction: row;
-    flex: 1; /* fills remaining space */
-    min-height: 0;
+    flex-direction: column;
+    width: 80%;
 }
 
-/* Article and Aside content areas */
+/* Article box styling */
 article {
-    flex: 2;
-    border: 1px solid #ccc;
-    padding: 16px;
-    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 10px;
+    margin: 10px 0;
 }
 
-aside {
-    flex: 1;
-    border: 1px solid #ccc;
-    padding: 16px;
-    overflow-y: auto;
+/* Responsive support class (already defined in base.css if provided) */
+.works_on_smartphone main {
+    flex-direction: column;
+    width: 100%;
 }
