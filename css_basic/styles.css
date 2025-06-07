@@ -1,3 +1,4 @@
+/* Base layout */
 body {
     display: flex;
     flex-direction: column;
@@ -5,27 +6,86 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    height: 100vh;
 }
 
-/* Container inside body */
 main {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex: 1;
     width: 80%;
+    min-height: 0;
 }
 
-/* Article box styling */
+/* Article and Aside positioning */
 article {
-    display: flex;
-    flex-direction: column;
+    flex: 2;
     border: 1px solid #000;
     border-radius: 10px;
-    padding: 10px;
+    padding: 20px;
     margin: 10px 0;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 5px rgba(0,0,0,0.05);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #333;
 }
 
-/* Responsive support class (already defined in base.css if provided) */
+aside {
+    flex: 1;
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 20px;
+    margin: 10px 0 10px 10px;
+    overflow-y: auto;
+    background-color: #f0f4f8;
+}
+
+/* Header and Footer */
+header, footer {
+    background-color: #ececec;
+    width: 100%;
+    padding: 20px;
+    border-bottom: 1px solid #ccc;
+    text-align: left;
+}
+
+/* Logo styling */
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-right: 10px;
+    color: #d35400;
+    list-style: none;
+}
+
+/* Navigation styling */
+header ul {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header ul li {
+    margin-right: 20px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+/* Responsive behavior */
 .works_on_smartphone main {
     flex-direction: column;
     width: 100%;
+}
+
+.works_on_smartphone aside {
+    margin-left: 0;
+    margin-top: 10px;
 }
