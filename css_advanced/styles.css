@@ -1,0 +1,169 @@
+/* ===== GLOBAL RESET ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+  background-color: #fff;
+  color: #fff;
+}
+
+/* ===== HEADER ===== */
+header {
+  padding: 20px 60px;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+
+nav img {
+  width: 120px;
+}
+
+nav ul {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+
+nav ul li a {
+  color: white;
+  font-weight: 500;
+  text-decoration: none;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+nav ul li a:hover {
+  color: #ccc;
+}
+
+/* ===== HERO SECTION (WITH INSTRUCTORS) ===== */
+.hero {
+  background: linear-gradient(
+      rgba(10, 10, 10, 0.6),
+      rgba(10, 10, 10, 0.6)
+    ),
+    url('Object.png') no-repeat center center;
+  background-size: cover;
+  height: 100vh;
+  padding: 160px 40px 60px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.hero-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.hero-content h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  color: white;
+}
+
+.hero-tags {
+  display: flex;
+  gap: 20px;
+}
+
+.hero-tags span {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: white;
+}
+
+.hero-content button {
+  margin-top: 20px;
+  padding: 14px 32px;
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  border-radius: 24px;
+  background: #c271ff;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.hero-content button:hover {
+  background: #a956e5;
+}
+
+.hero-subheading {
+  margin-top: 80px;
+}
+
+.hero-subheading h2 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: white;
+}
+
+.hero-subheading h2 span {
+  color: #c271ff;
+  font-weight: 600;
+}
+
+/* ===== INSTRUCTORS INSIDE HERO ===== */
+.instructor-grid {
+  display: flex;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.instructor {
+  color: white;
+  max-width: 180px;
+}
+
+.instructor img {
+  width: 150px;
+  height: auto;
+  border: 4px solid white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  margin-bottom: 20px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.instructor h3 {
+  font-size: 1rem;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.instructor p {
+  font-size: 0.85rem;
+  color: #cfcfcf;
+  font-style: italic;
+  line-height: 1.4;
+}
